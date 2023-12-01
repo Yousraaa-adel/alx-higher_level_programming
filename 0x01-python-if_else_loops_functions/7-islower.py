@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def islower(c):
     for i in range(ord("a"), ord("z") + 1):
         if c == chr(i):
