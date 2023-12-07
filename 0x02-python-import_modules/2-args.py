@@ -8,7 +8,7 @@ if __name__ == "__main__":
     # arguments if plural and argument when more than 1 args
     arg = "argument" if arg_len == 0 or arg_len == 1 else "arguments"
 
-    pun = "." if arg_len == 1 else ":"
+    pun = "." if arg_len < 1 else ":"
 
     line = "\n" if arg_len >= 1 else ""
         
