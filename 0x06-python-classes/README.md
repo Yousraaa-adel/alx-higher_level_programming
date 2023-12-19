@@ -1,0 +1,1 @@
+A project meant to understand the Object Oriented Programming concept in Python. 
