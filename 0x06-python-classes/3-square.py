@@ -5,7 +5,8 @@
 
 class Square:
     """ Represent a class Square """
-    def __init__(self, self=0):
+
+    def __init__(self, size=0):
         """ Initializes a Square instance.
 
         Args:
@@ -25,5 +26,4 @@ class Square:
 
     def area(self):
         """ Returns the current area of the square """
-
         return (self.__size * self.__size)
