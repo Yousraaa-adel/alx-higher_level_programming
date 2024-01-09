@@ -7,7 +7,18 @@
 
 
 def add_integer(a, b=98):
-    """Adds two integers together."""
+    """Adds two integer and/or float values.
+
+    Args:
+        a (int): First value
+        b (int, optional): Second value. Defaults to 98.
+
+    Raises:
+        TypeError: If a and b are not integers or floats.
+
+    Returns:
+        int: Sum of a and b.
+    """
 
     if a is None:
         raise TypeError("add_integer() missing 1 required positional argument: 'a'")
