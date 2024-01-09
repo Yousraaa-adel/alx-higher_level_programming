@@ -1,0 +1,1 @@
+A project meant to understand test-driven development and start thinking of all posible edge test cases.
