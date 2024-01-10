@@ -29,7 +29,7 @@ Checking regular strings with first_name and last_name:
         >>> say_my_name(first_name, last_name)
         My name is Yousra Adel
 
-Checking if first_name is NOT a string:
+Passing wrong types of first_name:
         >>> first_name = 2
         >>> last_name = "John"
         >>> say_my_name(first_name, last_name)
@@ -72,7 +72,7 @@ Checking if first_name is NOT a string:
         ...
         TypeError: first_name must be a string
 
-Checking if last_name is NOT a string:
+Passing wrong types of last_name:
         >>> first_name = "John"
         >>> last_name = 2
         >>> say_my_name(first_name, last_name)
