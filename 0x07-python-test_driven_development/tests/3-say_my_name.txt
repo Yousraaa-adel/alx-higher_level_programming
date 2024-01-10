@@ -112,3 +112,15 @@ Calling the function without last_name:
         >>> first_name = "John"
         >>> say_my_name(first_name)
         My name is John
+
+Passing first_name and last_name as None:
+        >>> say_my_name(None, None)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+Passing more than two arguments to say_my_name().
+        >>> say_my_name("Chris", "Breezy", "Brown") #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+            ...
+        TypeError: say_my_name() takes from 1 to 2 positional arguments but ...
