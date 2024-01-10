@@ -5,7 +5,7 @@
     The 3-say_my_name module divides all elements of a matrix.
 """
 def say_my_name(first_name, last_name=""):
-    """divides all elements of a matrix.
+    """Prints my name.
 
     Args:
         first_name (str): First value
