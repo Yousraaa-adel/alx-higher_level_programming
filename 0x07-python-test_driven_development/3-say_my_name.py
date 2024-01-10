@@ -26,7 +26,7 @@ def say_my_name(first_name, last_name=""):
     
     # Print the full name with last_name if provided, otherwise just first_name
     if last_name:
-        print("My name is {first_name} {last_name}")
+        print(f"My name is {first_name} {last_name}")
     else:
         print(f"My name is {first_name}")
     
