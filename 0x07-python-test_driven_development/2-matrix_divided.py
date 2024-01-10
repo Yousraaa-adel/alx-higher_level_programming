@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
     Returns:
         list: A new matrix divided by div, rounded to 2 decimal places
     """
-
+    # Checking if matrix exists and of type list
     if not matrix or not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
@@ -33,6 +33,7 @@ def matrix_divided(matrix, div):
     row_size = len(matrix[0])
 
     for row in matrix:
+        # Checking if row exists and of type list
         if not row or not isinstance(row, list):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
@@ -41,9 +42,11 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
 
         for n in row:
+            # Checking if n is either of types int or float only
             if (not isinstance(n, int) and not isinstance(n, float)) or isinstance(n, bool):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-        
+            
+            # Checking if div is either of types int or float only
             if ( not isinstance(div, int) and not isinstance(div, float)) or isinstance(div, bool):
                 raise TypeError("div must be a number")
 
@@ -51,6 +54,7 @@ def matrix_divided(matrix, div):
                 raise ZeroDivisionError("division by zero")
             
             result = n / div
+            # Appending the new lists to the newMatrix after rounding n to 2 places
             newRow.append(round(result, 2))
         newMatrix.append(newRow)
     
