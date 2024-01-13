@@ -17,12 +17,6 @@ def print_square(size):
 
     Returns:
         str: prints a square with the character #.
-    
-    Example:
-        >>> print_square(3)
-        ###
-        ###
-        ###
     """
 
     if not isinstance(size, int) or isinstance(size, bool):
