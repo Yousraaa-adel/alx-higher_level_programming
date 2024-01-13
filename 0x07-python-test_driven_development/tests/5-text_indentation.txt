@@ -1,0 +1,68 @@
+"""
+
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Importing the function text_indentation:
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+        >>> text_indentation("Hello?")
+        Hello?
+        <BLANKLINE>
+        <BLANKLINE>
+
+Checking for module docstring:
+        >>> m = __import__("5-text_indentation").__doc__
+        >>> len(m) > 1
+        True
+
+Passing a normal string:
+        >>> text_indentation("This is a text. Hello")
+        This is a text.
+        <BLANKLINE>
+         Hello
+
+Passing various wrong data types as text:
+        >>> text_indentation(1)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+        >>> text_indentation(True)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+        >>> text_indentation(False)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+        >>> text_indentation(1.6)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+        >>> text_indentation([1, 4])
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+Passing more than 1 argument:
+        >>> text_indentation("hi", "hello") #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() takes 1 positional argument but ...
+
+        >>> text_indentation("hi", 4) #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() takes 1 positional argument but ...
+
+        >>> text_indentation(5, 4) #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() takes 1 positional argument but ...
+
