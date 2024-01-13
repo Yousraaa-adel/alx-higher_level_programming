@@ -1,0 +1,73 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+Importing the function print_square:
+        >>> print_square = __import__('4-print_square').print_square
+        >>> print_square(2)
+        ##
+        ##
+
+Checking for module docstring:
+        >>> m = __import__("4-print_square").__doc__
+        >>> len(m) > 1
+        True
+
+Passing an integer:
+        >>> print_square(4)
+        ####
+        ####
+        ####
+        ####
+
+Passing various wrong data types:
+        >>> print_square("This is a string")
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+        >>> print_square(True)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+        >>> print_square(False)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+        >>> print_square([1])
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+        >>> print_square(1.5)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Passing more than 1 argument:
+        >>> print_square(1.5, 1) #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+        ...
+        TypeError: print_square() takes 1 positional argument but ...
+
+        >>> print_square(1.5, 1, 5, "hi") #doctest: +ELLIPSIS
+        Traceback (most recent call last):
+        ...
+        TypeError: print_square() takes 1 positional argument but ...
+
+Passing a float that is less than 0:
+        >>> print_square(0.5)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Passing an integer that is less than 0:
+        print_square(0.3)
+        Traceback (most recent call last):
+        ...
+        ValueError: size must be >= 0
+
