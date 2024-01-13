@@ -82,8 +82,4 @@ Passing negative integers:
         ...
         ValueError: size must be >= 0
 
-
-Returns:
-    None
-
 """
