@@ -15,7 +15,7 @@ Checking for module docstring:
         >>> len(m) > 1
         True
 
-Passing an integer:
+Passing a positive integer:
         >>> print_square(4)
         ####
         ####
@@ -71,3 +71,11 @@ Passing an integer that is less than 0:
         ...
         ValueError: size must be >= 0
 
+Passing zero:
+        >>> print_square(0)
+
+Passing negative integers:
+        >>> print_square(-3)
+        Traceback (most recent call last):
+        ...
+        ValueError: size must be >= 0
