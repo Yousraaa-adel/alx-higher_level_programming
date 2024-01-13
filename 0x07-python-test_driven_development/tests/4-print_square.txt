@@ -1,4 +1,3 @@
-"""
 The ``4-print_square`` module
 ======================
 
@@ -81,5 +80,3 @@ Passing negative integers:
         Traceback (most recent call last):
         ...
         ValueError: size must be >= 0
-
-"""
