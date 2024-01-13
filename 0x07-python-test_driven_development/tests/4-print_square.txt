@@ -73,7 +73,7 @@ Passing an integer that is less than 0:
 
 Passing zero:
         >>> print_square(0)
-        # No exceptions should be raised, and the output can be empty.
+
 
 Passing negative integers:
         >>> print_square(-3)
