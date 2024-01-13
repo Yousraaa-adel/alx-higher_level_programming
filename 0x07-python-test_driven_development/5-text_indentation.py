@@ -21,14 +21,17 @@ def text_indentation(text):
 
     if not isinstance(text, str) or isinstance(text, bool):
         raise TypeError("text must be a string")
-    
-    text = text.strip()
-    newText = ""
 
-    for c in text:
-        if c in ['.', '?', ':']:
-            newText += c + "\n\n"
-        else:
-            newText += c
-        
-    print(newText)
+    if text == "":
+        pass
+    else:
+        text = text.strip()
+        newText = ""
+
+        for c in text:
+            if c in ['.', '?', ':']:
+                newText += c + "\n\n"
+            else:
+                newText += c
+            
+        print(newText)

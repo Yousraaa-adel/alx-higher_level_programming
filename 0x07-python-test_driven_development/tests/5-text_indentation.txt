@@ -66,6 +66,10 @@ Passing more than 1 argument:
         ...
         TypeError: text_indentation() takes 1 positional argument but ...
 
+Passing an empty string:
+        >>> text_indentation("")
+        
+
 Passing spaces before the tex:
         >>> text_indentation("     Hello there.")
         Hello there.
