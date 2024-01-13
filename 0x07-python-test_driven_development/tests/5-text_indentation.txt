@@ -68,11 +68,21 @@ Passing more than 1 argument:
 
 Passing an empty string:
         >>> text_indentation("")
-        
+
 
 Passing spaces before the tex:
         >>> text_indentation("     Hello there.")
         Hello there.
         <BLANKLINE>
         <BLANKLINE>
+
+Passing a single space after '., :, ?':
+        >>> text_indentation("Lorem ipsum: Lorem ipsum? Lorem ipsum. ")
+        Lorem ipsum:
+        <BLANKLINE>
+        Lorem ipsum?
+        <BLANKLINE>
+        Lorem ipsum.
+        <BLANKLINE>
+
 
