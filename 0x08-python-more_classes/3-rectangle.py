@@ -94,7 +94,7 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
     
     def __str__(self):
-        """Prints the rectangle with the character # .
+        """Prints the rectangle with the character #.
 
         Returns:
             str: the rectangle
@@ -109,7 +109,6 @@ class Rectangle:
                 rectangle.append("#")
             rectangle.append("\n")
         
-        # Removes the last empty line
         rectangle.pop()
 
         return "".join(rectangle)
