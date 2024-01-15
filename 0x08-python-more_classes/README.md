@@ -1,0 +1,1 @@
+This is a project to further strengthen my understanding of OOP, Classes, and Objects.
