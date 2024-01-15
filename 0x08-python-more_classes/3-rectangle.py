@@ -101,14 +101,17 @@ class Rectangle:
         """
         rectangle = []
 
+        # Checking if either is zero then abort
         if (self.__width == 0) or (self.__height == 0):
             return ""
         
+        # Looping over both height and then width to print #
         for h in range(self.__height):
             for w in range(self.__width):
                 rectangle.append("#")
             rectangle.append("\n")
         
+        # Removes the last empty line
         rectangle.pop()
 
         return "".join(rectangle)
