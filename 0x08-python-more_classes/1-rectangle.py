@@ -37,8 +37,8 @@ class Rectangle:
             int: the height of the rectangle.
         """
         return self.__height
-    
-    # Assigning value to width after checkijng for possible errors
+
+
     @width.setter
     def width(self, value):
         """Property setter for width of rectangle.
@@ -57,8 +57,7 @@ class Rectangle:
         else:
             self.__width = value
     
-    
-    # Assigning value to height after checkijng for possible errors
+
     @height.setter
     def height(self, value):
         """Property setter for height of recyangle.
