@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 0-rectangle.py).
+    Class that defines properties of rectangle by: (based on 4-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -17,9 +17,9 @@ class Rectangle:
             width (int, optional): width of rectangle. Defaults to 0.
             height (int, optional): height of rectangle. Defaults to 0.
         """
-        self.__height = height
-        self.__width = width
-    
+        self.height = height
+        self.width = width
+
     @property
     def width(self):
         """Width retriver.
@@ -28,7 +28,7 @@ class Rectangle:
             int: the width of the rectangle.
         """
         return self.__width
-    
+
     @property
     def height(self):
         """Height retriver.
@@ -37,7 +37,7 @@ class Rectangle:
             int: the height of the rectangle.
         """
         return self.__height
-    
+
     @width.setter
     def width(self, value):
         """Property setter for width of rectangle.
@@ -75,43 +75,41 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        """Calculates area of Rectangle
+        """Calculates area of a rectangle.
 
         Returns:
-            int: area of Rectangle
+            int: area.
         """
-        return self.__width * self.__height
+        return self.__height * self.__width
 
     def perimeter(self):
-        """Calculates perimeter of Rectangle
+        """Calculates perimeter of a rectangle
 
         Returns:
-            int: perimeter of Rectangle
+            int: perimeter.
         """
-        if (self.__width == 0) or (self.__height == 0):
+        if self.__height == 0 or self.width == 0:
             return 0
         else:
-            return 2 * (self.__width + self.__height)
-    
+            return 2 * (self.__height + self.__width)
+
     def __str__(self):
-        """Prints the rectangle with the character #.
+        """Prints the rectangle with the character # .
 
         Returns:
             str: the rectangle
         """
         rectangle = []
 
-        # Checking if either is zero then abort
-        if (self.__width == 0) or (self.__height == 0):
+        if self.__width == 0 or self.__height == 0:
             return ""
-        
-        # Looping over both height and then width to print #
-        for h in range(self.__height):
-            for w in range(self.__width):
+
+        for i in range(self.__height):
+            for j in range(self.__width):
                 rectangle.append("#")
             rectangle.append("\n")
-        
-        # Removes the last empty line
+
+        # remove blank line
         rectangle.pop()
 
         return "".join(rectangle)
