@@ -5,7 +5,7 @@
 class Rectangle:
     """
     Class that defines properties of rectangle by: (based on 0-rectangle.py).
-    
+
     Attributes:
         width (int): width of the rectangle.
         height (int): height of the rectangle.
@@ -17,8 +17,8 @@ class Rectangle:
             width (int, optional): width of rectangle. Defaults to 0.
             height (int, optional): height of rectangle. Defaults to 0.
         """
-        self.__width = width
-        self.__height = height
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -28,16 +28,15 @@ class Rectangle:
             int: the width of the rectangle.
         """
         return self.__width
-    
+
     @property
     def height(self):
-         """Height retriver.
+        """Height retriver.
 
         Returns:
             int: the height of the rectangle.
         """
         return self.__height
-
 
     @width.setter
     def width(self, value):
@@ -50,13 +49,12 @@ class Rectangle:
             TypeError: if width is not an integer.
             ValueError: if width is less than 0.
         """
-        if not isinstance(width, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif width < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
 
     @height.setter
     def height(self, value):
@@ -69,9 +67,9 @@ class Rectangle:
             TypeError: if height is not an integer.
             ValueError: if height is less than 0.
         """
-        if not isinstance(height, int):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif height < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
