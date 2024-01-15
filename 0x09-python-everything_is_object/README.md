@@ -1,0 +1,1 @@
+This projkect is meant to let me understand Objects and how they are in everything.
