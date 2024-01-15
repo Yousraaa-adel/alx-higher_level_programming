@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 4-rectangle.py).
+    Class that defines properties of rectangle by: (based on 8-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -21,9 +21,9 @@ class Rectangle:
             width (int, optional): width of rectangle. Defaults to 0.
             height (int, optional): height of rectangle. Defaults to 0.
         """
-        self.height = height
-        self.width = width
         type(self).number_of_instances += 1
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -97,7 +97,7 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__height + self.__width)
-    
+
     @classmethod
     def square(cls, size=0):
         """Returns a new rectangle instance with width == height == size.
@@ -143,8 +143,8 @@ class Rectangle:
     def __del__(self):
         """Deletes an instance of a class
         """
-        print("{:s}".format("Bye rectangle..."))
         type(self).number_of_instances -= 1
+        print("{:s}".format("Bye rectangle..."))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
