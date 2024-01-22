@@ -7,15 +7,6 @@
 
 
 def list_division(my_list_1, my_list_2, list_length):
-    """Divides 2 integers and prints the result.
-
-    Args:
-        a (int): first value
-        b (int): second value
-
-    Raises:
-        ValueError and TypeError
-    """
     div = []
     tmp_result = 0
 
