@@ -1,0 +1,1 @@
+This is a project to warm up with JS.
