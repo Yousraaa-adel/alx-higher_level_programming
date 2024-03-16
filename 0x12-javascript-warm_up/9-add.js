@@ -7,9 +7,8 @@ if (isNaN(num1) || isNaN(num2) || !num1 || !num2) {
   console.log('NaN');
 }
 
-function add (a, b) {
-  return a + b;
+function add (num1, num2) {
+  return num1 + num2;
 }
 
-const sum = add(num1, num2);
-console.log(sum);
+console.log(add(num1, num2));
