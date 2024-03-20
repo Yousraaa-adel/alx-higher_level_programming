@@ -1,6 +1,6 @@
 -- Create db 'hbtn_0d_usa'
 -- If db already exists, script should not fail
-CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+CREATE DATABASE IF NOT EXISTS `hbtn_0d_usa`;
 
 -- Create table 'cities' in db 'hbtn_0d_usa'
 -- id INT unique, auto generated, not null, primary key
