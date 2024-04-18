@@ -1,12 +1,4 @@
 #!/usr/bin/python3
 
 def only_diff_elements(set_1, set_2):
-    new_list = []
-
-    for i in set_1:
-        new_list.append(i)
-
-    for j in set_2:
-        new_list.append(j)
-
-    return new_list
+    return set_1.symmetric_difference(set_2)
