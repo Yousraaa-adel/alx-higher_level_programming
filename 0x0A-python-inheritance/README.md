@@ -1,0 +1,1 @@
+This is a project to understand the concept of inheretance in Python with OOP.
