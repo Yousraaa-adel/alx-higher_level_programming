@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 def lookup(obj):
-    example = dir(lookup)
+    example = dir(obj)
     return example
