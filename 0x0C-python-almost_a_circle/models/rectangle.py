@@ -3,6 +3,7 @@
 Base = __import__('base.py').Base
 
 
+
 class Rectangle(Base):
     """ Representation of the Rectangle class. """
 
