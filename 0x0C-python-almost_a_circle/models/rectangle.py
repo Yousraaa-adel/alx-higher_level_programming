@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Defines the Rectangle class that inherits from Base class. """
-Base = __import__('base.py').Base
+from models.base import Base
 
 
 class Rectangle(Base):
