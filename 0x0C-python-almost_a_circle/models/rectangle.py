@@ -26,60 +26,60 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-        @property
-        def width(self):
-            """ Width getter. """
-            return self.__width
+    @property
+    def width(self):
+        """ Width getter. """
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """ Width setter. """
-            if type(value) is not int:
-                raise TypeError("width must be an integer.")
+    @width.setter
+    def width(self, value):
+        """ Width setter. """
+        if type(value) is not int:
+            raise TypeError("width must be an integer.")
 
             if value <= 0:
                 raise ValueError("width must be bigger than 0.")
 
             self.__width = value
 
-        @property
-        def height(self):
-            """ Height getter. """
-            return self.__height
+    @property
+    def height(self):
+        """ Height getter. """
+        return self.__height
 
-        @height.setter
-        def height(self, value):
-            """ Height setter. """
-            if type(value) is not int:
-                raise TypeError("height must be an integer.")
+    @height.setter
+    def height(self, value):
+        """ Height setter. """
+        if type(value) is not int:
+            raise TypeError("height must be an integer.")
 
-            if value <= 0:
-                raise ValueError("height must be bigger than 0.")
+        if value <= 0:
+            raise ValueError("height must be bigger than 0.")
 
-        @property
-        def x(self):
-            """ X getter. """
-            return self.__x
+    @property
+    def x(self):
+        """ X getter. """
+        return self.__x
 
-        @x.setter
-        def x(self, value):
-            """ X setter. """
-            if type(value) is not int:
-                raise TypeError("x coordinate must be an integer.")
+    @x.setter
+    def x(self, value):
+        """ X setter. """
+        if type(value) is not int:
+            raise TypeError("x coordinate must be an integer.")
 
-            if value <= 0:
-                raise ValueError("x coordinate must be bigger than 0.")
+        if value <= 0:
+            raise ValueError("x coordinate must be bigger than 0.")
 
-        @property
-        def y(self):
-            """ Y getter. """
-            return self.__y
+    @property
+    def y(self):
+        """ Y getter. """
+        return self.__y
 
-        @y.setter
-        def y(self, value):
-            """ Y setter. """
-            if type(value) is not int:
-                raise TypeError("y coordinate must be an integer.")
+    @y.setter
+    def y(self, value):
+        """ Y setter. """
+        if type(value) is not int:
+            raise TypeError("y coordinate must be an integer.")
 
-            if value <= 0:
-                raise ValueError("y coordinate must be bigger than 0.")
+        if value <= 0:
+            raise ValueError("y coordinate must be bigger than 0.")
