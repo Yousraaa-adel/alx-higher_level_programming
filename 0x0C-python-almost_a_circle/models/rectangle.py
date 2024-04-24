@@ -14,6 +14,10 @@ class Rectangle(Base):
             x (int): The x coordinate of the rectangle.
             y (int): The y coordinate of the rectangle.
             id (int): The id of the new rectangle.
+
+        Raises:
+            TypeError: If width or height or x or y are not integers.
+            ValueError: If width or height or x or y are less than 0.
         """
         super().__init__(id)
 
