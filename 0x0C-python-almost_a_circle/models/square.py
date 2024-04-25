@@ -8,16 +8,13 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """ Intizializes a new square.
+
         Args:
             size (int): The size of the new square.
             x (int): The x cordinate of the new square.
             y (int): The y coordinate of the new square.
             id (int): the identity of the new square.
         """
-        self.size = size
-        self.x = x
-        self.y = y
-        self.id = None
         super().__init__(size, size, x=0, y=0, id)
 
     def __str__(self):
