@@ -97,6 +97,11 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 2, 8, [1])
             Rectangle(2, 2, {3}, [1])
 
+    def test_area(self):
+        """ Test calculating the area of the rectangle. """
+        new = Rectangle(3, 2, 3, 4)
+        self.assertEqual(6, 6)
+
 
 if __name__ == "__main__":
     unittest.main()

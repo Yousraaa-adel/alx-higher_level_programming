@@ -17,7 +17,8 @@ class Rectangle(Base):
 
         Raises:
             TypeError: If width or height or x or y are not integers.
-            ValueError: If width or height or x or y are less than 0.
+            ValueError: If width or height are < 0.
+            ValueError: If x or y are <= 0.
         """
         super().__init__(id)
 
@@ -88,3 +89,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
         self.__y = value
+
+    def area(self):
+        """ Calculates the area of the rectangle. """
+        return self.width * self.height
