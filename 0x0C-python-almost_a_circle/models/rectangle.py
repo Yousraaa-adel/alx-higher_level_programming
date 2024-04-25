@@ -69,7 +69,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("x coordinate must be an integer.")
 
-        if value <= 0:
+        if value < 0:
             raise ValueError("x coordinate must be bigger than 0.")
 
         self.__x = value
@@ -85,7 +85,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("y coordinate must be an integer.")
 
-        if value <= 0:
+        if value < 0:
             raise ValueError("y coordinate must be bigger than 0.")
 
         self.__y = value
