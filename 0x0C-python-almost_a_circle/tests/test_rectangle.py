@@ -1,4 +1,6 @@
 import unittest
+from io import StringIO
+import sys
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -101,6 +103,18 @@ class TestRectangle(unittest.TestCase):
         """ Test calculating the area of the rectangle. """
         new = Rectangle(3, 2, 3, 4)
         self.assertEqual(6, 6)
+
+    def test_display(self):
+        """ Test displaying a new rectangle. """
+        new = Rectangle(4, 6)
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        new.display()
+        sys.stdout = sys.__stdout__
+
+        expected_output = "####\n####\n####\n####\n####\n####\n"
+        self.assertEqual(captured_output.getvalue(), expected_output)
 
 
 if __name__ == "__main__":
