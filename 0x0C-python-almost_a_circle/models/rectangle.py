@@ -98,15 +98,15 @@ class Rectangle(Base):
         """ Prints in stdout the Rectangle instance with the character #. """
 
     def display(self):
-        """Displays the rectangle using # """
+        """ Prints Rectangle in stdout using #. """
         for y in range(self.y):
             print("")
-        for row in range(self.__height):
+        for r in range(self.__height):
             for x in range(self.x):
                 print(" ", end="")
-            for column in range(self.__width):
+            for col in range(self.__width):
                 print("#", end="")
-            print()
+            print("")
 
     def __str__(self):
         """ Overrides the __str__method. """
