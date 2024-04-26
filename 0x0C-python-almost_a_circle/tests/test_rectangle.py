@@ -91,6 +91,7 @@ class TestRectangle(unittest.TestCase):
             Rectangle({1}, 2)
             Rectangle(True, 2)
             Rectangle(False, 2)
+            Rectangle("3", 2)
 
             Rectangle({}, [])
 
@@ -104,6 +105,7 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, {1})
             Rectangle(2, True)
             Rectangle(2, False)
+            Rectangle(2, "2")
 
     def test_non_int_x(self):
         """ Test non-int x values. """
@@ -115,6 +117,7 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 2, {1}, 3)
             Rectangle(2, 2, True, 3)
             Rectangle(2, 2, False, 3)
+            Rectangle(2, 2, "2", 3)
 
     def test_non_int_y(self):
         """ Test non-int y values. """
@@ -126,6 +129,7 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 2, 8, [1])
             Rectangle(2, 2, 8, True)
             Rectangle(2, 2, 8, False)
+            Rectangle(2, 2, 8, "2")
             Rectangle(2, 2, {3}, [1])
 
     def test_area(self):

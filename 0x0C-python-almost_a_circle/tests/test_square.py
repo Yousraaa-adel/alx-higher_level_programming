@@ -65,6 +65,7 @@ class TestSquare(unittest.TestCase):
             Square(0.5)
             Square(True)
             Square(False)
+            Square("Hello")
 
     def test_size_zero(self):
         """ Testing size with zero value. """
