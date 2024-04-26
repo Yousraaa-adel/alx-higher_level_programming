@@ -6,9 +6,29 @@ from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):
+    """ A class to test the rectangle class. """
 
     def setUp(self):
+        """ Code to be added at the beginning of each instance. """
         Base._Base__nb_objects = 0
+
+    def TearDown(self):
+        """ Code to be added after each instance. """
+        pass
+
+    def test_is_base(self):
+        """ Test if Rectangle class inherits from Base class. """
+        self.assertIsInstance(Rectangle(1, 2), Base)
+
+    def test_no_args(self):
+        """ Test with no arguments passed. """
+        with self.assertRaises(TypeError):
+            Rectangle()
+
+    def test_one_arg(self):
+        """ Test with one argument only. """
+        with self.assertRaises(TypeError):
+            Rectangle(1)
 
     def test_new_rectangle(self):
         """ Test new Rectangle class. """
