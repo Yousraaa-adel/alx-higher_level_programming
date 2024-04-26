@@ -106,9 +106,11 @@ class Rectangle(Base):
 
         for i in range(height):
             print(" " * x, end="")
+            for x in range(x):
+                print(" ", end="")
             for j in range(width):
                 print("#", end="")
-            print("")
+            print()
 
     def __str__(self):
         """ Overrides the __str__method. """
