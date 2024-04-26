@@ -11,7 +11,7 @@ class Base():
         """ Intitializes the class.
 
         Args:
-            id (id): The id of the new base.
+            id (id): The id of the new base. Defaults to None.
         """
 
         if id is not None:
