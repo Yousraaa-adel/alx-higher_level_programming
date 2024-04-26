@@ -149,8 +149,17 @@ class TestRectangle(unittest.TestCase):
         expected_output = "####\n####\n####\n####\n####\n####\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
 
-    # def test_display_with_coordinates(self):
-    #     """ Testing display method with x & y. """
+    def test_display_with_coordinates(self):
+        """ Testing display method with x & y. """
+        r1 = Rectangle(2, 3, 2, 2)
+        captrd_output = StringIO()
+
+        with redirect_stdout(captrd_output):
+            r1.display()
+
+        expected_output = "##\n  ##\n  ##"
+        self.assertEqual(captrd_output.getvalue().strip(), expected_output)
+
 
     def test_str(self):
         """ Testing the output of the str meth9od. """
