@@ -1,6 +1,7 @@
 import unittest
 from io import StringIO
 import sys
+from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -88,6 +89,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle([], 2)
             Rectangle([1], 2)
             Rectangle({1}, 2)
+            Rectangle(True, 2)
+            Rectangle(False, 2)
 
             Rectangle({}, [])
 
@@ -99,6 +102,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, [])
             Rectangle(2, [1])
             Rectangle(2, {1})
+            Rectangle(2, True)
+            Rectangle(2, False)
 
     def test_non_int_x(self):
         """ Test non-int x values. """
@@ -108,6 +113,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 3, [], 3)
             Rectangle(2, 1, [1], 3)
             Rectangle(2, 2, {1}, 3)
+            Rectangle(2, 2, True, 3)
+            Rectangle(2, 2, False, 3)
 
     def test_non_int_y(self):
         """ Test non-int y values. """
@@ -117,6 +124,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 3, 1, {})
             Rectangle(2, 1, 6, {1})
             Rectangle(2, 2, 8, [1])
+            Rectangle(2, 2, 8, True)
+            Rectangle(2, 2, 8, False)
             Rectangle(2, 2, {3}, [1])
 
     def test_area(self):
@@ -124,8 +133,8 @@ class TestRectangle(unittest.TestCase):
         new = Rectangle(3, 2, 3, 4)
         self.assertEqual(6, 6)
 
-    def test_display(self):
-        """ Test displaying a new rectangle. """
+    def test_display_without_coordinates(self):
+        """ Testing display method with width & height only. """
         new = Rectangle(4, 6)
         captured_output = StringIO()
         sys.stdout = captured_output
@@ -135,6 +144,9 @@ class TestRectangle(unittest.TestCase):
 
         expected_output = "####\n####\n####\n####\n####\n####\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
+
+    # def test_display_with_coordinates(self):
+    #     """ Testing display method with x & y. """
 
     def test_str(self):
         """ Testing the output of the str meth9od. """

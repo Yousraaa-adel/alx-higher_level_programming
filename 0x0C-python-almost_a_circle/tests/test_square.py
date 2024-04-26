@@ -50,6 +50,41 @@ class TestSquare(unittest.TestCase):
 
         self.assertEqual(captured_output.getvalue().strip(), expected_output)
 
+    def test_new_square(self):
+        """ Testing new square. """
+        square = Square(2)
+        self.assertEqual(square.width, 2)
+
+    def test_not_int(self):
+        """ Testing with size not an int. """
+        with self.assertRaises(TypeError):
+            Square([])
+            Square({})
+            Square({2})
+            Square({2, 5})
+            Square(0.5)
+            Square(True)
+            Square(False)
+
+    def test_size_zero(self):
+        """ Testing size with zero value. """
+        with self.assertRaises(ValueError):
+            Square(0)
+
+    def test_negative_size(self):
+        """ Testing with a negative value. """
+        with self.assertRaises(ValueError):
+            Square(-1)
+
+    def test_all_args(self):
+        """ Passing all args. """
+        s1 = Square(1, 0, 0)
+        s2 = Square(3, 2, 1)
+        self.assertEqual(s1.height, 1)
+        self.assertEqual(s1.width, 1)
+        self.assertEqual(s2.height, 3)
+        self.assertEqual(s2.width, 3)
+
 
 if __name__ == "__main__":
     unittest.main()
