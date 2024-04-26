@@ -96,19 +96,15 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints in stdout the Rectangle instance with the character #. """
-        width = self.__width
-        height = self.__height
-        x = self.x
-        y = self.y
 
     def display(self):
         """Displays the rectangle using # """
-        for y in range(y):
+        for y in range(self.y):
             print("")
-        for row in range(height):
-            for x in range(x):
+        for row in range(self.__height):
+            for x in range(self.x):
                 print(" ", end="")
-            for column in range(width):
+            for column in range(self.__width):
                 print("#", end="")
             print()
 
