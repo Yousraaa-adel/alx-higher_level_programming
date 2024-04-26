@@ -101,13 +101,14 @@ class Rectangle(Base):
         x = self.x
         y = self.y
 
-        for _ in range():
+        def display(self):
+        """Displays the rectangle using # """
+        for y in range(y):
             print("")
-        for i in range(height):
-            print(" " * x, end="")
+        for row in range(height):
             for x in range(x):
                 print(" ", end="")
-            for j in range(width):
+            for column in range(width):
                 print("#", end="")
             print()
 
