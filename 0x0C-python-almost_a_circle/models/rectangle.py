@@ -108,7 +108,7 @@ class Rectangle(Base):
             print(" " * x, end="")
             for j in range(width):
                 print("#", end="")
-            print()
+            print("")
 
     def __str__(self):
         """ Overrides the __str__method. """
