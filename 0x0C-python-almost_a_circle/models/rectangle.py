@@ -101,7 +101,7 @@ class Rectangle(Base):
         x = self.x
         y = self.y
 
-        def display(self):
+    def display(self):
         """Displays the rectangle using # """
         for y in range(y):
             print("")
