@@ -26,6 +26,9 @@ class Square(Rectangle):
     def size(self, value):
         """ Setter for the size of the square.
 
+        Args:
+            value (int): value of the size.
+
         Raises:
             TypeError: If value is not an int.
             ValueError: If value is <= 0.
