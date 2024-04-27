@@ -125,7 +125,7 @@ class Rectangle(Base):
         if args:
             for i in range(len(args)):
                 if i == 0:
-                    if i is None:
+                    if args[i] is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = args[i]
