@@ -144,7 +144,7 @@ class Rectangle(Base):
                 i += 1
 
         elif kwargs and len(kwargs) != 0:
-            for key, value in kwargs:
+            for key, value in kwargs.items():
                 if key == "id":
                     if value is None:
                         self.__init__(self.width, self.height, self.x, self.y)
