@@ -147,11 +147,13 @@ class Rectangle(Base):
             for key, value in kwargs:
                 if key == "id":
                     if value is None:
-                        self.__init__(self.size, self.x, self.y)
+                        self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = value
-                elif key == "size":
-                    self.size = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
                 elif key == "x":
                     self.x = value
                 elif key == "y":
