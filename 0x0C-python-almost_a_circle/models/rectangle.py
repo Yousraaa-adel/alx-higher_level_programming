@@ -110,7 +110,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
             f"{self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute.
 
         Args (ints):
@@ -119,6 +119,10 @@ class Rectangle(Base):
             3rd argument represents be the height attribute.
             4th argument represents be the x attribute.
             5th argument represents be the y attribute.
+
+        Kwrgs (dict):
+            A double pointer to a dict (key/value).
+            kwrgs must be skipped if args exists and not empty.
         """
         if args and len(args) != 0:
             i = 0
@@ -138,3 +142,17 @@ class Rectangle(Base):
                     self.y = arg
 
                 i += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs:
+                if key == "id":
+                    if value is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "size":
+                    self.size = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
