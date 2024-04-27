@@ -122,7 +122,7 @@ class Rectangle(Base):
 
         Kwargs (dict): Pairs of keys/values (keyworded args).
         """
-        if args and len(args) != 0:
+        if args:
             for i in range(len(args)):
                 if i == 0:
                     if i is None:
