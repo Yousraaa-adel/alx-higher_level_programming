@@ -122,21 +122,22 @@ class Rectangle(Base):
 
         Kwargs (dict): Pairs of keys/values (keyworded args).
         """
-        if args:
-            for i in range(len(args)):
+       if args and len(args) != 0:
+            i = 0
+            for arg in args:
                 if i == 0:
-                    if args[i] is None:
+                    if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = args[i]
+                        self.id = arg
                 elif i == 1:
-                    self.width = args[i]
+                    self.width = arg
                 elif i == 2:
-                    self.height = args[i]
+                    self.height = arg
                 elif i == 3:
-                    self.x = args[i]
+                    self.x = arg
                 elif i == 4:
-                    self.y args[i]
+                    self.y = arg
 
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
