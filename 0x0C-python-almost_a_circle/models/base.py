@@ -43,15 +43,15 @@ class Base():
 
         if list_objs is None:
             list_objs = []
-        else:
-            # Convert list of objs to a list of dicts
-            list_of_dicts = [obj.to_dictionary() for obj in list_objs]
 
-            # Convert list of dicts to a JSON string
-            json_string = cls.to_json_string(list_of_dicts)
+        # Convert list of objs to a list of dicts
+        list_of_dicts = [obj.to_dictionary() for obj in list_objs]
 
-            with open(file_name, "w") as f:
-                f.write(json_string)
+        # Convert list of dicts to a JSON string
+        json_string = cls.to_json_string(list_of_dicts)
+
+        with open(file_name, "w") as f:
+            f.write(json_string)
 
     @staticmethod
     def from_json_string(json_string):
