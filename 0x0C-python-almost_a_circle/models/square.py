@@ -47,6 +47,8 @@ class Square(Rectangle):
             2nd argument represents be the size attribute
             3rd argument represents be the x attribute
             4th argument represents be the y attribute
+
+        Kwargs (dict): Pairs of keys/values (keyworded args).
         """
         if args and len(args) != 0:
             i = 0
@@ -64,3 +66,17 @@ class Square(Rectangle):
                     self.y = arg
 
                 i += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is not None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "size":
+                    self.size = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value

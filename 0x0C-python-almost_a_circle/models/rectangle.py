@@ -120,9 +120,7 @@ class Rectangle(Base):
             4th argument represents be the x attribute.
             5th argument represents be the y attribute.
 
-        Kwrgs (dict):
-            A double pointer to a dict (key/value).
-            kwrgs must be skipped if args exists and not empty.
+        Kwargs (dict): Pairs of keys/values (keyworded args).
         """
         if args and len(args) != 0:
             i = 0
