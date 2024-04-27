@@ -29,3 +29,12 @@ class Base():
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Returns the list of the JSON string representation json_string. """
+
+        if not json_string:
+            return []
+        else:
+            return json.loads(json_string)
