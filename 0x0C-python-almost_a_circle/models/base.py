@@ -74,7 +74,7 @@ class Base():
             if cls.__name__ == "Rectangle":
                 new = cls(3, 2, 4)
             else:
-                new = update(1)
+                new = cls(1, 3)
             new.update(**dictionary)
 
             return new
