@@ -67,6 +67,7 @@ class Base():
     def create(cls, **dictionary):
         """ Returns an instance with all attributes already set.
 
+        cls (class): The classes.
         dictionary (dict): Data to update values with.
         """
 
