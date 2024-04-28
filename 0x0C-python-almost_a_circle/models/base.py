@@ -86,11 +86,10 @@ class Base():
         cls (class): The classes.
         """
 
-        file_name = f"{cls.__name__}.json"
-
-        if not os.path.isfile(filename):
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
-
-        with open(file_name, "r") as f:
-            list_dicts = Base.from_json_string(json_string.read())
-            return [cls.create(**d) for d in list_dicts]
