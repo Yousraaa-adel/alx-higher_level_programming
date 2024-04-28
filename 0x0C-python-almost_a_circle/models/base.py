@@ -71,11 +71,11 @@ class Base():
         **dictionary (dict): Data to update values with.
         """
 
-        if dictionary and dictionary != {}:
-            if cls.__name__ == "Rectangle":
-                new = cls(3, 2)
-            elif cls.__name__ == "Square":
-                new = cls(1)
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            dummy = cls(1)
 
-            new.update(**dictionary)
-            return new
+        dummy.update(**dictionary)
+        return dummy
+
