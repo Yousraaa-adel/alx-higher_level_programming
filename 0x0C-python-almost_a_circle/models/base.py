@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines the base class for all other classes in this project. """
 import json
+from models.rectangle import Rectangle
 
 
 class Base():
@@ -61,3 +62,19 @@ class Base():
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Returns an instance with all attributes already set.
+
+        dictionary (dict): Data to update values with.
+        """
+
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(3, 2, 4)
+            else:
+                new = update(1)
+            new.update(**dictionary)
+
+            return new
