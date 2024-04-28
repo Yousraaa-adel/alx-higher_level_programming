@@ -68,6 +68,7 @@ class Base():
         """Return a class instantied from a dictionary of attributes.
 
         Args:
+            cls (class): The classes.
             **dictionary (dict): Key/value pairs of attributes to initialize.
         """
         if dictionary and dictionary != {}:
