@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Defines the base class for all other classes in this project. """
 import json
-from models.rectangle import Rectangle
 
 
 class Base():
