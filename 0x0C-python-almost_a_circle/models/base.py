@@ -74,8 +74,8 @@ class Base():
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 new = cls(3, 2)
-            else:
+            elif cls.__name__ == "Square":
                 new = cls(1)
-            new.update(**dictionary)
 
+            new.update(**dictionary)
             return new
