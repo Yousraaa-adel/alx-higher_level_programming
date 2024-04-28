@@ -68,12 +68,12 @@ class Base():
         """ Returns an instance with all attributes already set.
 
         cls (class): The classes.
-        dictionary (dict): Data to update values with.
+        **dictionary (dict): Data to update values with.
         """
 
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new = cls(3, 2, 4)
+                new = cls(3, 2)
             else:
                 new = cls(1)
             new.update(**dictionary)
