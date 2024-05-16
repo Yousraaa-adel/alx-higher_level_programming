@@ -17,10 +17,8 @@ if __name__ == "__main__":
             password=sys.argv[2],
             database=sys.argv[3],
         ) as connection:
-            db_query = ("SELECT * "
-                        "FROM states "
-                        "WHERE name LIKE BINARY '{}' "
-                        "ORDER BY states.id ASC;".format(sys.argv[4]))
+            db_query = ("SELECT * FROM states WHERE name LIKE BINARY '{}' \
+                        ORDER BY states.id ASC;".format(sys.argv[4]))
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
 
