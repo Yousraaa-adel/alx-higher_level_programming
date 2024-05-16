@@ -21,7 +21,7 @@ if __name__ == "__main__":
             db_query = ("SELECT * "
                         "FROM states "
                         "WHERE name LIKE BINARY '{}' "
-                        "ORDER BY states.id ASC".format(name_searched))
+                        "ORDER BY states.id ASC;".format(name_searched))
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
 
