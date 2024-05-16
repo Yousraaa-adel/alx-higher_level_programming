@@ -16,7 +16,7 @@ if __name__ == "__main__":
             db_query = ("SELECT * "
                         "FROM states "
                         "WHERE name "
-                        "LIKE 'N%' "
+                        "LIKE BINARY 'N%' "
                         "ORDER BY states.id ASC;")
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
