@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" A script that lists all states with a name starting with N. """
+"""
+    A script that takes in an argument and displays all values
+    in the states table of hbtn_0e_0_usa where name matches the argument.
+"""
 
 import MySQLdb
 from MySQLdb import connect, Error
@@ -10,15 +13,15 @@ if __name__ == "__main__":
         with connect(
             host="localhost",
             port=3306,
-            user=sys.argv[1],
+            username=sys.argv[1],
             password=sys.argv[2],
-            database=sys.argv[3]
+            database=sys.argv[3],
         ) as connection:
+            name_searched=sys.argv[4]
             db_query = ("SELECT * "
                         "FROM states "
-                        "WHERE name "
-                        "LIKE BINARY 'N%' "
-                        "ORDER BY states.id ASC;")
+                        "WHERE name LIKE BINARY '{}'"
+                        "ORDER BY states.id ASC;".format(name_searched))
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
 
