@@ -17,7 +17,7 @@ if __name__ == "__main__":
             database=sys.argv[3]
         ) as connection:
             # print(connection)
-            db_query = "SELECT * FROM `states` ORDER BY `states.id` ASC;"
+            db_query = "SELECT * FROM states ORDER BY states.id ASC;"
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
 
