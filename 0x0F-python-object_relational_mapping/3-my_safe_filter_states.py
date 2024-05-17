@@ -21,7 +21,7 @@ if __name__ == "__main__":
             name_searched = sys.argv[4]
             db_query = ("SELECT * FROM states \
                         WHERE name LIKE BINARY %s \
-                        ORDER BY states.id ASC", (name_searched,))
+                        ORDER BY states.id ASC", (name_searched, ))
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
                 rows = cursor.fetchall()
