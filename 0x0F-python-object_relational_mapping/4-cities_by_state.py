@@ -15,7 +15,7 @@ if __name__ == "__main__":
             database=sys.argv[3]
         ) as connection:
             db_query = ("SELECT cities.id, cities.name, states.name \
-                        FROM cities INNER JOIN states \
+                        FROM cities JOIN states \
                         ON states.id = cities.states_id \
                             ORDER BY cities.id ASC;")
             with connection.cursor() as cursor:
