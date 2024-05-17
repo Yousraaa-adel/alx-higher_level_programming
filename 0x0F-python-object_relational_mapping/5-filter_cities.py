@@ -17,16 +17,17 @@ if __name__ == "__main__":
             db=sys.argv[3]
         ) as connection:
             state_name = sys.argv[4]
-            db_query = ("SELECT cities.id, cities.name, states.name \
+            db_query = ("SELECT cities.name \
                         FROM cities \
-                        LEFT JOIN states ON \
-                        states.id = cities.state_id \
-                        WHERE states.name = %s")
+                        JOIN states ON \
+                        cities.state_id = states.id \
+                        WHERE states.name LIKE %s\
+                        ORDER BY cities.id ASC")
             with connection.cursor() as cursor:
                 cursor.execute(db_query, (state_name, ))
                 rows = cursor.fetchall()
                 if rows is not None:
-                    print(", ".join([state[1] for state in states]))
+                    print(", ".join(row[0]))
 
     except Error as e:
         print(e)
