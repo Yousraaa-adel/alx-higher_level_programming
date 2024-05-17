@@ -24,7 +24,8 @@ if __name__ == "__main__":
                 rows = cursor.fetchall()
                 if rows is not None:
                     for row in rows:
-                        print(row)
+                        city_id, city_name, state_name = row
+                        print(city_id, city_name, state_name)
 
     except Error as e:
         print(e)
