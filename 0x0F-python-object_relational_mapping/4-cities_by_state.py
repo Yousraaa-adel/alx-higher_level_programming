@@ -16,7 +16,7 @@ if __name__ == "__main__":
         ) as connection:
             db_query = ("SELECT cities.id, cities.name, states.name \
                         FROM cities JOIN states \
-                        ON states.id = cities.state_id \
+                        ON cities.state_id = states.id \
                             ORDER BY cities.id ASC;")
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
