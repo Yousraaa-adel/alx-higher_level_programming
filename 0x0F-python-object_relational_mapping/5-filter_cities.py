@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""
+""" A script that takes in the name of a state as
+    an argument and lists all cities of that state.
 """
 import MySQLdb
 from MySQLdb import connect, Error
