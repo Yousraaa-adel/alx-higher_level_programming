@@ -20,9 +20,9 @@ if __name__ == "__main__":
         ) as connection:
             db_query = ("SELECT * FROM states \
                         WHERE name LIKE %s \
-                        ORDER BY id ASC", (sys.argv[4], ))
+                        ORDER BY id ASC")
             with connection.cursor() as cursor:
-                cursor.execute(db_query)
+                cursor.execute(db_query, (sys.argv[4], ))
                 rows = cursor.fetchall()
                 if rows is not None:
                     for row in rows:
