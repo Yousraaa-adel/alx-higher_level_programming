@@ -10,13 +10,13 @@ if __name__ == "__main__":
         with connect(
             host="localhost",
             port=3306,
-            username=sys.argv[1],
-            password=sys.argv[2],
-            database=sys.argv[3]
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3]
         ) as connection:
             db_query = ("SELECT cities.id, cities.name, states.name \
-                        FROM cities JOIN states \
-                        ON cities.state_id = states.id \
+                        FROM cities INNER JOIN states \
+                        ON states.id = cities.state_id \
                             ORDER BY cities.id ASC;")
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
@@ -24,8 +24,7 @@ if __name__ == "__main__":
                 rows = cursor.fetchall()
                 if rows is not None:
                     for row in rows:
-                        city_id, city_name, state_name = row
-                        print(city_id, city_name, state_name)
+                        print(row)
 
     except Error as e:
         print(e)
