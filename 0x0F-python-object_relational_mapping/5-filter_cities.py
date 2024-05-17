@@ -26,9 +26,8 @@ if __name__ == "__main__":
             with connection.cursor() as cursor:
                 cursor.execute(db_query, (state_name, ))
                 rows = cursor.fetchall()
-                if rows is not None:
-                    for row in rows:
-                        print(", ".join(row[0]))
+                print(", ".join(city[0] for city in rows))
+
 
     except Error as e:
         print(e)
