@@ -22,8 +22,9 @@ if __name__ == "__main__":
                 cursor.execute(db_query)
 
                 rows = cursor.fetchall()
-                for row in rows:
-                    print(row)
+                if rows is not None:
+                    for row in rows:
+                        print(row)
 
     except Error as e:
         print(e)
