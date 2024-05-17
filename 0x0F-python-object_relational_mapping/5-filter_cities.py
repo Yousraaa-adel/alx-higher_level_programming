@@ -28,6 +28,5 @@ if __name__ == "__main__":
                 rows = cursor.fetchall()
                 print(", ".join(city[0] for city in rows))
 
-
     except Error as e:
         print(e)
