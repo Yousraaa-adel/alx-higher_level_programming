@@ -14,7 +14,9 @@ if __name__ == "__main__":
             password=sys.argv[2],
             database=sys.argv[3]
         ) as connection:
-            db_query = ("SELECT FROM * cities ORDER BY cities.id ASC;")
+            db_query = ("SELECT * FROM cities INNER JOIN states \
+                        ON state_id = cities.id \
+                            ORDER BY cities.id ASC")
             with connection.cursor() as cursor:
                 cursor.execute(db_query)
 
