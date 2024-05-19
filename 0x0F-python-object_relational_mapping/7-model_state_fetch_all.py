@@ -11,16 +11,18 @@ from model_state import Base, State
 
 if __name__ == "__main__":
 
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(argv[1],
-                                                                    argv[2],
-                                                                    argv[3]))
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+            argv[1], argv[2], argv[3]
+            )
+        )
 
     Base.metadata.create_all()
 
     Session = sessionmaker(bind=engine)
     Session = Session()
 
-    for state in session.query(State).order_by(states.id):
+    for state in session.query(State).order_by(States.id):
         print("{}: {}".format(state.id, state.name))
 
     session.close()
