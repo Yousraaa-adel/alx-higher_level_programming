@@ -2,6 +2,8 @@
 """
     A script that lists the first object of the State table.
 """
+
+
 import sqlalchemy
 from sqlalchemy.orm import create_engine, sessionmaker, Session
 from sys import argv
