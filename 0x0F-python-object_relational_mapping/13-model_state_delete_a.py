@@ -23,7 +23,7 @@ if __name__ == "__main__":
     session = Session()
     name = "%a%"
 
-    states = session.quer(State).filter(
+    states = session.query(State).filter(
         State.name.like(name)).one()
 
     for state in states:
