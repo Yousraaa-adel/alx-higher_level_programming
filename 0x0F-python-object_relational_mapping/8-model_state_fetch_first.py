@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A script that lists the first object of the State table.
+A script that lists the first object of the State table.
 """
 
 
