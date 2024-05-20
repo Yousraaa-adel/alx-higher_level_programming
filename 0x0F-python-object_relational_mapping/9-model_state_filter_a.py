@@ -27,4 +27,4 @@ if __name__ == "__main__":
         State.name.like(s)).order_by(State.id)
 
     for state in states_with_a:
-        print("{}: {}".format(states.id, states.name))
+        print("{}: {}".format(state.id, state.name))
