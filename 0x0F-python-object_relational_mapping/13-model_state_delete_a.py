@@ -24,7 +24,7 @@ if __name__ == "__main__":
     name = "%a%"
 
     states = session.query(State).filter(
-        State.name.like(name)).one()
+        State.name.like(name))
 
     for state in states:
         session.delete(state)
