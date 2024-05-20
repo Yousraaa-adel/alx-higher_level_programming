@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A script that lists the first object of the State table.
+    A script that lists the first object of the State table.
 """
 
 
@@ -8,7 +8,6 @@ import sqlalchemy
 from sqlalchemy.orm import create_engine, sessionmaker, Session
 from sys import argv
 from model_state import Base, State
-
 
 if __name__ == "__main__":
 
