@@ -24,10 +24,10 @@ if __name__ == "__main__":
     name = argv[4]
 
     state = session.query(State).filter(
-        State.name.like(name)).order_by(State.id)
+        State.name.like(name)).first()
 
     if state is not None:
-        print(state.id)
+        print(str(state.id))
     else:
         print("Not found")
 
