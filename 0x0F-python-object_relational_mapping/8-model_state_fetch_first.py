@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-list the first State object from a database
+    A script that lists first State object from the database.
 """
 import sqlalchemy
 from sqlalchemy.orm import create_engine, sessionmaker, Session
