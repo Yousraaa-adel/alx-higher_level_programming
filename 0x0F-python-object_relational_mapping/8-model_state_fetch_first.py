@@ -2,8 +2,6 @@
 """
 list the first State object from a database
 """
-
-
 import sqlalchemy
 from sqlalchemy.orm import create_engine, sessionmaker, Session
 from sys import argv
