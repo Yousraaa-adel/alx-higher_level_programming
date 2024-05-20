@@ -24,7 +24,7 @@ if __name__ == "__main__":
     name = "%a%"
 
     states = session.quer(State).filter(
-        State.name.like(s)).one()
+        State.name.like(name)).one()
 
     session.delete(states)
     session.commit()
