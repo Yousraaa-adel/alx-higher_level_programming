@@ -26,6 +26,8 @@ if __name__ == "__main__":
     states = session.quer(State).filter(
         State.name.like(name)).one()
 
-    session.delete(states)
+    for state in states:
+        session.delete(states)
+
     session.commit()
     session.close()
