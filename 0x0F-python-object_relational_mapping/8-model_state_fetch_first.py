@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-    A script that lists first State objects from the database.
+list the first State object from a database
 """
 
 import sqlalchemy
-from sqlalchemy.orm import create_engine, sessionmaker, Session
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from sys import argv
 from model_state import Base, State
 
