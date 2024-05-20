@@ -33,6 +33,6 @@ if __name__ == "__main__":
         State.name.like(name)).first()
 
     print(str(state.id))
-    
+
     session.commit()
     session.close()
