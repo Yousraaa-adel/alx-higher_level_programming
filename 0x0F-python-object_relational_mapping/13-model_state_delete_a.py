@@ -27,7 +27,7 @@ if __name__ == "__main__":
         State.name.like(name)).one()
 
     for state in states:
-        session.delete(states)
+        session.delete(state)
 
     session.commit()
     session.close()
