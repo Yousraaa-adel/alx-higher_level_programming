@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     for city in rows:
         print("{}: {} -> {}".format(
-            city.id, city.name, state.name
+            city.id, city.name, city.state.name
         ))
 
     session.close()
