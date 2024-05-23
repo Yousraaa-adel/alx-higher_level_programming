@@ -2,9 +2,9 @@
 """
 contains the class City.
 """
-import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base, State
+from sqlalchemy.ext.declarative import declarative_base
+from relationship_state import State
 
 
 Base = declarative_base()
