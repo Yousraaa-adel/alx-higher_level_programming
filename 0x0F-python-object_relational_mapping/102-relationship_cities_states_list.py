@@ -23,8 +23,6 @@ if __name__ == '__main__':
     rows = session.query(City).all()
 
     for city in rows:
-        print("{}: {} -> {}".format(
-            city.id, city.name, city.state.name
-        ))
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
     session.close()
