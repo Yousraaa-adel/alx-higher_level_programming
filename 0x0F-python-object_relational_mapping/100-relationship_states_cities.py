@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A script that prints all City objects from the database.
+A script that prints all City objects from the database.
 """
 
 import sqlalchemy
