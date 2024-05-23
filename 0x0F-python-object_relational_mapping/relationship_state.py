@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-    A script  that contains the class definition of
-    a State and an instance Base.
+contains the class definition of a State and an instance Base.
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
