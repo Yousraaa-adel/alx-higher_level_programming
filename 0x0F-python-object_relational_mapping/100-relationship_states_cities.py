@@ -1,25 +1,30 @@
 #!/usr/bin/python3
 """
-creates the State California with the City San Francisco from the database
+    A script that creates the State “California” with
+    the City “San Francisco” from the database.
 """
 
 import sqlalchemy
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
-from sys import argv
-
 
 if __name__ == "__main__":
-    eng = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
-        argv[1], argv[2], argv[3]
-        ))
-    Base.metadata.create_all(eng)
-    Session = sessionmaker(bind=eng)
+
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+            argv[1], argv[2], argv[3]
+        )
+    )
+
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
-    cali = State(name="California")
-    cali.cities = [City(name="San Francisco")]
-    session.add(cali)
+
+    california = State(name="California")
+    california.cities = [City(name="San Francisco")]
+    session.add(california)
     session.commit()
     session.close()
