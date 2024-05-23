@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Creates the State "California" with the City "San Francisco" from a DB
+    A script that lists all State objects,
+    and corresponding City objects, contained in the database.
 """
 import sys
 from relationship_state import Base, State
