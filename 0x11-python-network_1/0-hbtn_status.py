@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" """
 
 import urllib.request
 from urllib.request import urlopen

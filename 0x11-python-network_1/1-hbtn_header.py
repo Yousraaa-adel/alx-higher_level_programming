@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module reads a header in the response and gets its value. """
 
 from urllib.request import urlopen
 import sys
