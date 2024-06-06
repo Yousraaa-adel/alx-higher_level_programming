@@ -22,8 +22,7 @@ if __name__ == "__main__":
         request = urllib.request.Request(url, data)
 
         with urllib.request.urlopen(request) as response:
-            content = response.read().decode("utf-8")
-            print(f"Your email is: {content}")
+            print(response.read().decode("utf-8"))
 
     except Exception as e:
         print(e)
