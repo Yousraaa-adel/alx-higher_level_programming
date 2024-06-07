@@ -16,6 +16,6 @@ if __name__ == "__main__":
     try:
         response = requests.get(url)
 
-        print(response.headers["X-Request-Id"])
+        print(response.headers.get("X-Request-Id"))
     except Exception as e:
         print(e)
