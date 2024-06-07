@@ -12,11 +12,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     url = sys.argv[1]
-    params = sys.argv[2]
+    email = sys.argv[2]
+    payload = {"email": email}
 
     try:
-        response = requests.post(url, params=params)
+        response = requests.post(url, data=payload)
 
-        print(f"Your email is: {response.text}")
+        print(f"{response.text}")
     except Exception as e:
         print(e)
