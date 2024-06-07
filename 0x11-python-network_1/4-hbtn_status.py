@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """A script that:
-- takes in a URL,
-- displays the body of the response (decoded in utf-8)
+- fetches https://alx-intranet.hbtn.io/status
 """
 import requests
 
