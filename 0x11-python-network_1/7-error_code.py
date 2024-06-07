@@ -15,6 +15,7 @@ if __name__ == "__main__":
     try:
         response = requests.get(url)
 
-        print(f"Error code: {response.status_code}")
+        if response.status_code >= 400:
+            print(f"Error code: {response.status_code}")
     except Exception as e:
         print(e)
