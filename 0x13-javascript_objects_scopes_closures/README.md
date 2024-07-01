@@ -1,0 +1,1 @@
+This project is to understand the OOP in JS.
